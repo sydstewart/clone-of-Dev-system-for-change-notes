@@ -213,8 +213,21 @@ def store_data(file):
        functionexist = app_tables.functions.get(function = i)
        if not functionexist:
          app_tables.functions.add_row(function = i)
-
-
+         
+@tables.in_transaction  
+@anvil.server.callable
+def update_change_1(change, change_copy):
+  # check that the article given is really a row in the ‘articles’ table
+  change_copy['ips'] = change_copy['difficulty'] * change_copy['payoff']
+  change_copy['rpn'] = change_copy['severity']*change_copy['probability']*change_copy['visibility']
+  if app_tables.change_notes.has_row(change):
+     change.update(**change_copy)
+     loggedinuser =  anvil.users.get_user()['email']
+     change_copy['user_changed'] = loggedinuser
+     change_copy['when_changed'] = datetime.now()
+     app_tables.change_notes_audit.add_row(**change_copy)
+  else:
+    raise Exception("Chanmge Note does not exist")
       
 @anvil.server.callable
 def update_change( change_copy, loggedinuser):

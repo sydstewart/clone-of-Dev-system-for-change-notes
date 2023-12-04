@@ -46,9 +46,29 @@ class RowTemplate1(RowTemplate1Template):
     if change_copy['severity'] and  change_copy['probability'] and change_copy['visibility']:
         self.item['rpn']  =change_copy['severity'] * change_copy['probability'] * change_copy['visibility']
         self.item['priority'] =change_copy['priority']
-    # open change note form 
-    result = alert(content=Change_note(item=change_copy), title="Update Change Note", buttons=[], large=True)
-    # open_form('Lists')
+    
+    save_1_clicked = alert(
+      content=Change_note(item=change_copy),
+      title="Update Change Note",
+      large=True,
+      buttons=[]
+    )
+    # Update the change if the user clicks save
+    if save_1_clicked:
+      anvil.server.call('update_change_1', self.item, change_copy)
+      # self.add_change_note()
+      self.refresh_data_bindings()
+      
+    # change_copy = dict(list(self.item))
+
+    # if change_copy['difficulty'] and change_copy['payoff']:
+    #     self.item['ips'] = change_copy['difficulty']*change_copy['payoff']
+    # if change_copy['severity'] and  change_copy['probability'] and change_copy['visibility']:
+    #     self.item['rpn']  =change_copy['severity'] * change_copy['probability'] * change_copy['visibility']
+    #     self.item['priority'] =change_copy['priority']
+    # # open change note form 
+    # result = alert(content=Change_note(item=change_copy), title="Update Change Note", buttons=[], large=True)
+    # # open_form('Lists')
  
     
     

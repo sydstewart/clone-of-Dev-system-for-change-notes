@@ -51,12 +51,12 @@ def add_change_note(self):
                                   'found_in_version_no' : self.found_in_version_dropdown.selected_value
                                 }
                         self.raise_event('x-close-alert', value=result)
-                        check = anvil.server.call('change_insert', result)
-                        if check:
-                          alert(' Change Note added successfully')
-                          self.refresh_data_bindings()
-                        else:
-                          alert(' Change Note NOT successfully added')
+                        # check = anvil.server.call('change_insert', result)
+                        # if check:
+                        #   alert(' Change Note added successfully')
+                        #   self.refresh_data_bindings()
+                        # else:
+                        #   alert(' Change Note NOT successfully added')
 
                         
           else:
@@ -93,15 +93,15 @@ def add_change_note(self):
                                   'found_in_version_no' : self.found_in_version_dropdown.selected_value
                                 }
                         self.raise_event('x-close-alert', value=result)
-                        loggedinuser =  anvil.users.get_user()['email']
-                        print('LoggedinUser=',loggedinuser)
-                        check = anvil.server.call('update_change', result, loggedinuser)
-                        # check = anvil.server.call('change_insert', result)
-                        if check:
-                          alert(' Change Note edited successfully')
-                          self.refresh_data_bindings()
-                        else:
-                          alert(' Change Note NOT successfully edited')
+                        # loggedinuser =  anvil.users.get_user()['email']
+                        # print('LoggedinUser=',loggedinuser)
+                        # check = anvil.server.call('update_change', result, loggedinuser)
+                        # # check = anvil.server.call('change_insert', result)
+                        # if check:
+                        #   alert(' Change Note edited successfully')
+                        #   self.refresh_data_bindings()
+                        # else:
+                        #   alert(' Change Note NOT successfully edited')
                         
           else:
                         print(self.validator.are_all_valid())

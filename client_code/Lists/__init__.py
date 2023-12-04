@@ -108,18 +108,10 @@ class Lists(ListsTemplate):
     # Initialise an empty dictionary to store the user inputs
     content = Change_note()
     result = alert(content, buttons=[], title = 'New Change Note', large=True)
-    print(result)
-    self.refresh_changes()
-    # if result:
-    #     print('User=', loggedinuser)
-    #     # change_note_id = (result['product_area'] ) #+ ' ' + result['user']  ) # + str( result['change_date']) + ' '
-    #     app_tables.change_notes.add_row(**result)
-    #     print('changes- updated')
-    #     print('User=', loggedinuser)
-    #     result['user_changed'] = loggedinuser
-    #     result['when_changed'] = datetime.now()
-    #     app_tables.change_notes_audit.add_row(**result)
-    #     print('audit updated')
+    if result:
+       anvil.server.call('change_insert', result)
+       self.refresh_changes()
+    
         
  
 
