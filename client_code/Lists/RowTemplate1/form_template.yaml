@@ -16,9 +16,9 @@ components:
     foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: 'fa:pencil'}
-  name: button_1
+  name: edit_button
   layout_properties: {column: OMPHUL}
-  event_bindings: {click: button_1_click}
+  event_bindings: {click: edit_button_click}
 - type: TextBox
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,

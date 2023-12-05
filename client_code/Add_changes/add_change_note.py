@@ -49,7 +49,7 @@ def add_change_note(self):
                                   'found_in_last_two_years':self.check_box_1.checked,
                                   'released_in_version' :self.released_verision_no_dropdown.selected_value,
                                   'found_in_version_no' : self.found_in_version_dropdown.selected_value,
-                                   'reported_by_customer' 
+                                   'reported_by_customer' :self.text_box_2.text
                                 }
                         self.raise_event('x-close-alert', value=result)
                         # check = anvil.server.call('change_insert', result)
@@ -91,7 +91,8 @@ def add_change_note(self):
                                   'priority' : self.priority_textbox.text,
                                   'found_in_last_two_years':self.check_box_1.checked,
                                   'released_in_version' :self.released_verision_no_dropdown.selected_value,
-                                  'found_in_version_no' : self.found_in_version_dropdown.selected_value
+                                  'found_in_version_no' : self.found_in_version_dropdown.selected_value,
+                                  'reported_by_customer' :self.text_box_2.text
                                 }
                         self.raise_event('x-close-alert', value=result)
                         # loggedinuser =  anvil.users.get_user()['email']

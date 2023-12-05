@@ -543,7 +543,7 @@ components:
       - {id: OKRRON, title: Defect Improvement, data_key: classid, $$hashKey: 'object:60224',
         width: 109, expand: false}
       - {id: FJLNPA, title: Priority, data_key: priority, $$hashKey: 'object:60225',
-        width: 69, expand: false}
+        width: 121, expand: false}
       - {id: GKQAOZ, title: IPS, data_key: ips, $$hashKey: 'object:60226', width: '40'}
       - {id: ZHZCEQ, title: PICK, data_key: pick, $$hashKey: 'object:60227', width: '100'}
       - {id: OTRITV, title: RPN, data_key: rpn, $$hashKey: 'object:60228', width: '40'}

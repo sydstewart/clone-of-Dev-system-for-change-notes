@@ -37,7 +37,8 @@ class RowTemplate1(RowTemplate1Template):
     #       self.pick_textbox.bold =True
     # Any code you write here will run before the form opens.
 # EDIT
-  def button_1_click(self, **event_args):
+  
+  def edit_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     change_copy = dict(list(self.item))
 
@@ -116,6 +117,8 @@ class RowTemplate1(RowTemplate1Template):
     """This method is called when refreshing_data_bindings is called"""
     self.title.text = self.item['title']
     pass
+
+ 
 
  
 
