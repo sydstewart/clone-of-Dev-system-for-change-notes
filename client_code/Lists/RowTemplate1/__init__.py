@@ -59,7 +59,7 @@ class RowTemplate1(RowTemplate1Template):
       anvil.server.call('update_change_1', self.item, change_copy)
       # self.add_change_note()
       self.refresh_data_bindings()
-      
+      open_form('Lists')
     # change_copy = dict(list(self.item))
 
     # if change_copy['difficulty'] and change_copy['payoff']:
@@ -109,9 +109,7 @@ class RowTemplate1(RowTemplate1Template):
   #   """This method is called when the user presses Enter in this text box"""
   #   pass
 
-  def text_box_3_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
+
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
