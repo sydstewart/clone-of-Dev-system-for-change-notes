@@ -531,7 +531,7 @@ components:
         width: '130'}
       - {id: LGQKLC, title: Change Date, data_key: change_date, $$hashKey: 'object:60218',
         width: '110'}
-      - {id: ZIWPGV, title: Title, data_key: title, width: 170, expand: false, $$hashKey: 'object:60219'}
+      - {id: ZIWPGV, title: Title, data_key: title, width: 203, expand: true, $$hashKey: 'object:60219'}
       - {id: LCUUMY, title: Product Area, data_key: product_area, $$hashKey: 'object:60220',
         width: 81, expand: false}
       - {id: NOOEGX, title: Function, data_key: function, $$hashKey: 'object:60221',

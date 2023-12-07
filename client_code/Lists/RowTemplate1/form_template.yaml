@@ -90,13 +90,4 @@ components:
   - {property: text, code: 'self.item[''due_date''].strftime("%d %b %Y") if self.item[''due_date'']
       is not None else self.item[''due_date'']', writeback: false}
   event_bindings: {pressed_enter: text_box_3_pressed_enter}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false}
-  name: title
-  layout_properties: {column: ZIWPGV}
-  data_bindings:
-  - {property: text, code: 'self.item[''title'']', writeback: true}
 is_package: true
