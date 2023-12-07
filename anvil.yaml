@@ -518,4 +518,5 @@ db_schema:
     - name: stage_order
       admin_ui: {width: 200}
       type: string
+uplink_visible: true
 renamed: true
