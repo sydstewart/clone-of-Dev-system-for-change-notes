@@ -5,6 +5,8 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 import anvil.tz
+import anvil.media
+
 from anvil.tables import app_tables
 from datetime import datetime, time , date , timedelta
 from ..selection import selection
@@ -412,6 +414,15 @@ class Lists(ListsTemplate):
     
   
     
+    pass
+
+  def export_CSV_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    csv_file = self.repeating_panel_1.items.to_csv()
+    #   # Or...
+    # csv_file = app_tables.my_table.search().to_csv()
+    anvil.media.download(csv_file)
     pass
 
  
